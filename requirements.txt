@@ -1,0 +1,15 @@
+streamlit
+pymupdf
+chromadb
+sentence-transformers
+langchain
+langchain-community
+langchain-text-splitters
+ollama
+torch
+torchvision
+pandas
+datasets
+ragas
+langchain-ollama
+langchain-huggingface

@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+
+chroma_db/
+data/
+evaluation/ragas_results.csv
+
+.DS_Store
+.env
