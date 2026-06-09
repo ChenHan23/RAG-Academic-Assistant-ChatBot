@@ -1,3 +1,13 @@
+---
+title: Academic RAG Assistant
+emoji: 📚
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+app_port: 7860
+pinned: false
+---
+
 # Local Academic RAG Assistant — Phase 1
 
 This is a fully local Retrieval-Augmented Generation starter project for academic PDFs.
