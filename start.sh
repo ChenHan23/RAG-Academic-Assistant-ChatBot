@@ -5,16 +5,16 @@ set -e
 echo "Starting Ollama server..."
 ollama serve &
 
-echo "Waiting for Ollama..."
-until ollama list >/dev/null 2>&1; do
+echo "Waiting for Ollama API..."
+until curl -s http://127.0.0.1:11434/api/tags >/dev/null 2>&1; do
   sleep 1
 done
 
-echo "Pulling LLaMA 3.2..."
-ollama pull llama3.2
+echo "Pulling model: ${OLLAMA_MODEL_NAME:-llama3.2}"
+ollama pull "${OLLAMA_MODEL_NAME:-llama3.2}"
 
 echo "Starting Streamlit..."
 python -m streamlit run app.py \
   --server.address 0.0.0.0 \
-  --server.port ${PORT:-8501} \
+  --server.port 7860 \
   --server.headless true
